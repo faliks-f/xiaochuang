@@ -33,7 +33,7 @@ void Widget::addSum()
         returnValue = serial.receiveInfo(2);
     } while (!returnValue && sign < 10);
     if (returnValue != 0)
-        I = (double)returnValue / 10000;
+        I = ((double)returnValue / 10000) - 2.5 / 0.18;
     sum += I * 2;
     ++addTimes;
 }
